@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darkest Blog</title>
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+  
+  <!-- Styling -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading-07">Darkest Blog</h1>
+    <div class="btn-container">
+      <a id="newPostBtn" href="/new">New Post</a>
+    </div>
+    <ul id="postsList">
+      <% posts.forEach(post=> { %>
+        <li>
+          <!-- <hr> -->
+          <h2 class="heading-04 ibm-plex-sans-semibold">
+            <%=post.title%>
+          </h2>
+          <small class="label-02 ibm-plex-sans-light">
+            <%=post.date %>
+          </small>
+          <p class="body-02">
+            <%=post.content%>
+          </p>
+          <small class="label-02 ibm-plex-sans-light">By: <%=post.author%> </small>
+          <div class="btn-container">
+            <a class="edit" href="/edit/<%= post.id %>">Edit</a>
+            <a class="delete" href="/api/posts/delete/<%= post.id %>">Delete</a>
+          </div>
+        </li>
+        <% }); %>
+    </ul>
+  </div>
+
+</body>
+
+</html>
