@@ -1,0 +1,328 @@
+/* Imports */
+@import url('color.css');
+@import url('typo.css');
+
+
+/* Reset some default browser styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  /* Color */
+  color: var(--grey10); 
+  background-color: var(--grey100);
+  /* Type */
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.root {
+  /* Layout */
+  min-width: 480px;
+  max-width: 840px;
+  margin: 40px auto;
+  /* padding: 20px 20px; */
+  background-color: var(--grey90);
+}
+
+
+/* Common */
+section {
+  margin-bottom: 0px;
+}
+/* section h5 {
+  margin-bottom: 24px;
+  font-weight: 500;
+} */
+
+
+/* Typography */
+h1 {
+  /*.heading-07
+    This is for layout headings. Weight: 300 / Light.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3.375rem;
+  line-height: 4rem;
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  /*.heading-06
+    This is for layout headings. Weight: 300 / Light.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.625rem;
+  line-height: 3.125rem;
+  letter-spacing: 0px;
+}
+
+h3 {
+  /*.heading-05
+    This is for layout headings. Weight: 300 / Light.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0px;
+  
+}
+
+h4 {
+  /*.heading-04
+    This is for layout headings. Weight: 400 / Regular.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: 0px;
+}
+
+h5 {
+  /*.heading-03
+    This is for component and layout headings. Weight: 400 / Regular.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0px;
+  /* margin-bottom: 20px; */
+}
+
+h6 {
+  /*.heading-02
+    This is for smaller layout headings. It pairs with $body-02. Weight: 600 / Semi-Bold.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.0rem;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+}
+
+
+p {
+  /*.body-02
+  With a slightly taller line height than body-compact-02, this style is commonly used in expressive
+  layouts for long paragraphs with four lines or more. It is always left-aligned.
+  Weight: 400 / Regular.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0rem;  
+  line-height: 1.5rem;
+  letter-spacing: 0.0px;
+  /* margin-bottom: 8px; */
+}
+
+p.sub {
+  font-weight: 200;
+  /* margin-bottom: 2px; */
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  /* filter: grayscale(50%); */
+}
+
+
+
+
+
+p,
+input,
+textarea {
+  margin-bottom: 10px;
+  /* max-width: 100%; */
+  /* color: var(--grey80); */
+}
+
+
+input,
+textarea {
+  width: 100%;
+  /* padding: 10px; */
+  /* border: 1px solid #ddd; */
+  border-radius: 0px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.3s;
+  /* color: var(--grey80); */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+/* Buttons */
+a,
+button {
+  /*.heading-03
+    This is for component and layout headings. Weight: 400 / Regular.
+  */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  color: var(--grey40);
+  background-color: rgba(0, 0, 0, 0);
+  transition: color 0.3s;
+  margin-right: 10px;
+}
+a,
+button:hover {
+  color: var(--grey10);
+}
+a svg,
+button svg {
+  width: 22px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Edit */
+#btn-edit {
+  color: var(--grey40);
+}
+#btn-edit:hover {
+  color: var(--blue50);
+}
+#btn-edit svg {
+  margin-top: -3px;
+}
+/* Delete */
+#btn-delete {
+  color: var(--grey40);
+}
+#btn-delete:hover {
+  color: var(--red50);
+}
+#btn-delete svg {
+  margin-top: -3px;
+}
+/* New */
+#btn-new-post {
+  color: var(--grey40);
+}
+#btn-new-post:hover {
+  color: var(--green50);
+}
+#btn-new-post svg {
+  margin-top: -3px;
+}
+
+
+#btn-create-post {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-container {
+  text-align: right;
+}
+
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  /* padding: 20px 0; */
+  margin-bottom: 20px;
+}
+
+li:first-child {
+  margin-top: 20px;
+}
+li:last-child {
+  margin-bottom: 0px;
+}
+
+
+hr {
+  height: 1px; /* Set the height to make it thinner */
+  border: none; /* Remove the default border */
+  /* background-color: black; */
+  border-top: 1px solid var(--grey50);
+}
+
+
+/* Section Title */
+.sec-title {
+  display: grid;
+  /* position: relative; */
+  /* padding: 20px 20px; */
+  background-color: #0a0e17;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
+.sec-title h4 {
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Section Posts */
+.sec-posts {
+  position: relative;
+  padding: 20px 20px;
+  /* text-align: center; */
+  /* background-color: var(--grey90); */
+}
+
+/* Section New Post */
+.sec-modify {
+  position: relative;
+  padding: 20px 20px;
+}
+
+.sec-modify p, input, textarea {
+  background-color: var(--grey10);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
